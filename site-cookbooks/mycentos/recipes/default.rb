@@ -1,13 +1,13 @@
 #
-# Cookbook Name:: owncloud
+# Cookbook Name:: mycentos
 # Recipe:: default
 #
 # Copyright 2013, YOUR_COMPANY_NAME
 #
 # All rights reserved - Do Not Redistribute
 #
-package "owncloud" 
 
-service "httpd" do
-  action :start
+service "iptables" do
+  action [:stop, :disable]
 end
+

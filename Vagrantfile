@@ -75,8 +75,10 @@ Vagrant::Config.run do |config|
   # end
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ["cookbooks", "site-cookbooks"]
-    chef.add_recipe "yumrepo"
+    chef.add_recipe "yum::epel"
+    chef.add_recipe "owncloud::repo"
     chef.add_recipe "owncloud"
+    chef.add_recipe "mycentos"
   end
 
   # Enable provisioning with chef server, specifying the chef server URL,
