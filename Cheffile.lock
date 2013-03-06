@@ -1,0 +1,18 @@
+SITE
+  remote: http://community.opscode.com/api/v1
+  specs:
+    yum (2.1.0)
+    yumrepo (0.16.6)
+      yum (>= 1.0.0)
+
+GIT
+  remote: https://github.com/myspotontheweb/chef-owncloud.git
+  ref: master
+  sha: 02c73f0feee4d86d16f97c10cd16ed7b9dfdea77
+  specs:
+    owncloud (0.1.0)
+
+DEPENDENCIES
+  owncloud (>= 0)
+  yumrepo (>= 0)
+
